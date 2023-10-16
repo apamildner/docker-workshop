@@ -1,0 +1,16 @@
+# 1: Use an official Python runtime as the base image
+## REPLACE ME WITH A "FROM" command ##
+
+# 2: Install jq + curl
+## REPLACE ME WITH A "RUN" command ##
+
+
+# 3: Set the working directory in the container
+## REPLACE ME WITH A "WORKDIR" command ##
+
+# 4: Copy the local scripts into the container
+## REPLACE ME WITH A "COPY" command ##
+
+# Specify the command to run on container start
+# Uncomment this when the above steps is complete
+# CMD [ "/bin/sh", "./entrypoint.sh" ]

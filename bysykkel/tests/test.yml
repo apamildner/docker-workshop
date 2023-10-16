@@ -1,0 +1,20 @@
+schemaVersion: "2.0.0"
+
+commandTests:
+  - name: "Check JQ version"
+    command: "jq"
+    args: ["--version"]
+    expectedOutput: ["jq-1.6"]
+
+fileExistenceTests:
+  - name: 'Check main.py was added in the right spot'
+    path: '/usr/src/app/main.py'
+    shouldExist: true
+
+  - name: 'Check mapping.json was added in the right spot'
+    path: '/usr/src/app/mapping.json'
+    shouldExist: true
+
+  - name: 'Check entrypoint.sh was added in the right spot'
+    path: '/usr/src/app/entrypoint.sh'
+    shouldExist: true
