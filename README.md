@@ -1,4 +1,4 @@
-# Docker workshop + shell scripting
+# Docker workshop + shell scripting + lite linux
 Pre-requisites: `Docker`
 
 Testa att køra `docker --version`
@@ -130,8 +130,8 @@ ting som vi gjorde och att den igen bygger på en annen image.
 Nå vill vi simplifisera allt, sån att vi bara kan kjøra "bysykkel" direkte fra kommandolinjen, och
 att det magiskt fungerar utan att vi trenger att "huske" att vi faktiskt kør en docker image osv.
 
-På deres maskin, så har man en $PATH som ær en lista med folders der som maskinen finner ting som kan exekveras når man skriver till exempel "docker" osv. Det kule ær att i /usr/local/bin kan vi lægga våra egna scripts,
-bara vi huskar att skriva en "#!" symbol som førteller vilket program som skall kjøre koden.
+På deres maskin, så har man en $PATH som ær en lista med folders der som maskinen finner ting som kan exekveras når man skriver till exempel "docker/ls/python/git" osv. Hver kommando som du kjører kan man bruka "which {command}" før att se hvor maskinen tror att programmet ær nånstans. Det kule ær att i /usr/local/bin kan vi lægga våra egna scripts,
+bara vi huskar att skriva en "#!" symbol som førteller vilket program som skall interpretera koden (med mindre det ær en faktiskt kjørbar fil, till exempel byggda Go/C program).
 I detta tilfelle vill vi att bash, som ær vårat terminalprogram, skall køra docker kommandot. I.e føljande:
 
 ```
