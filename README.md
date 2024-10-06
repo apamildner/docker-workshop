@@ -5,6 +5,8 @@ Testa att køra `docker --version`
 
 
 ## Workshop
+Vi ska bygga en enkel command line verktyg før att kunna se status på bysykkel stationerna
+kring skuret.
 Det som vi vill gøra ær føljande. Vi vill køra denna linjen
 i en maskin, før att få tillbaka resultaten om bysykklarnas status. Vi gidder ikke installera noe dependencies och vi har kun Docker some dependency:
 ```bash
