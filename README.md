@@ -35,7 +35,7 @@ Detta ær det underliggande kommandot, som har noe dependencies:
 ```bash
 curl -s https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json | jq '[.data.stations[] | {station_id, num_bikes_available, num_docks_available}]' | python main.py
 ```
-Tenk ikke før mye på argumenterna til JQ akkurat nå, bara vet att det ær ett sorts "SQL før JSON" som kan extrahera delar av en JSON struktur gitt en spørring.
+Tenk ikke før mye på argumenterna til JQ akkurat nå, bara vet att det ær ett sorts "query language før JSON" som kan extrahera delar av en JSON struktur gitt en spørring.
 Detta ær lite artificiellt "vanskligt" (hade kunnat bruka kun python till allt) men touchar några viktiga koncepter.
 
 ℹ️ Snacka med din gruppmedlem - hva ær det som skjer her? Hva betyr '|' symbolen? Hvar gør "curl" kommandoen?
@@ -120,7 +120,7 @@ vi det som en typisk "dependency" som kanske trengs i miljøet som din kod skall
 
 
 
-## Før den extra intresserade
+## Del 2 hvis tid finnes
 
 
 ### Under panseret - vilken image bygger vår image på?
@@ -133,7 +133,7 @@ Nå vill vi simplifisera allt, sån att vi bara kan kjøra "bysykkel" direkte fr
 att det magiskt fungerar utan att vi trenger att "huske" att vi faktiskt kør en docker image osv.
 
 På deres maskin, så har man en $PATH som ær en lista med folders der som maskinen finner ting som kan exekveras når man skriver till exempel "docker/ls/python/git" osv. Hver kommando som du kjører kan man bruka "which {command}" før att se hvor maskinen tror att programmet ær nånstans. Det kule ær att i /usr/local/bin kan vi lægga våra egna scripts,
-bara vi huskar att skriva en "#!" symbol som førteller vilket program som skall interpretera koden (med mindre det ær en faktiskt kjørbar fil, till exempel byggda Go/C program).
+bara vi huskar att skriva en "#!" (kallas "shebang") symbol som førteller vilket program som skall interpretera koden (med mindre det ær en faktiskt kjørbar binær fil, till exempel byggda Go/C program).
 I detta tilfelle vill vi att bash, som ær vårat terminalprogram, skall køra docker kommandot. I.e føljande:
 
 ```
